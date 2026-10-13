@@ -30,8 +30,6 @@ This is a modern, responsive portfolio website designed with a sleek black backg
 ```text
 humera-mubeen-portfolio/
 ├── index.html
-├── style.css
-├── script.js
 └── README.md
 ```
 
