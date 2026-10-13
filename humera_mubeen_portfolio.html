@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humera Mubeen - Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0b10',
+                        cardBg: '#12121a',
+                        cardHover: '#181824',
+                        accentPurple: '#8b5cf6',
+                        accentLight: '#a855f7',
+                        borderSubtle: '#22223b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0b10;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+        }
+        .glow-box {
+            box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+        .glow-box:hover {
+            box-shadow: 0 0 35px -5px rgba(168, 85, 247, 0.4);
+            border-color: rgba(168, 85, 247, 0.6);
+        }
+        .pixel-art {
+            image-rendering: pixelated;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0b10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #22223b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b5cf6;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 selection:bg-purple-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-[#0b0b10]/90 backdrop-blur-md border-b border-[#22223b]">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 to-indigo-300 bg-clip-text text-transparent">
+                humera.dev
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-purple-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+                <a href="#certifications" class="hover:text-purple-400 transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <span class="hidden sm:inline-block px-3.5 py-1.5 text-xs font-semibold rounded-full bg-purple-950/60 border border-purple-700/50 text-purple-300 animate-pulse">
+                    Available for Projects
+                </span>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-cardBg border-b border-[#22223b] space-y-3">
+            <a href="#about" class="block text-gray-300 hover:text-purple-400 py-1">About</a>
+            <a href="#skills" class="block text-gray-300 hover:text-purple-400 py-1">Skills</a>
+            <a href="#experience" class="block text-gray-300 hover:text-purple-400 py-1">Experience</a>
+            <a href="#projects" class="block text-gray-300 hover:text-purple-400 py-1">Projects</a>
+            <a href="#certifications" class="block text-gray-300 hover:text-purple-400 py-1">Certifications</a>
+            <a href="#contact" class="block text-gray-300 hover:text-purple-400 py-1">Contact</a>
+        </div>
+    </header>
+
+    <section class="relative pt-20 pb-28 px-6 overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-purple-950/40 border border-purple-800/45 text-purple-300 text-xs font-medium sm:hidden">
+                Available for new Projects
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-4">
+                Hey! , I am <span class="bg-gradient-to-r from-purple-400 via-purple-300 to-indigo-400 bg-clip-text text-transparent">Humera Mubeen</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-medium text-purple-300/90 mb-6">
+                Computer Science Engineering Student & Developer
+            </p>
+            <p class="max-w-2xl mx-auto text-gray-400 text-base sm:text-lg leading-relaxed mb-10">
+                I craft beautiful, functional digital experiences that bring ideas to life. Specializing in modern web development, JavaScript, and user-centered design.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="px-8 py-3.5 rounded-full bg-purple-600 hover:bg-purple-500 font-semibold text-white shadow-lg shadow-purple-600/30 transition-all transform hover:-translate-y-0.5">
+                    View My Work
+                </a>
+                <a href="#contact" class="px-8 py-3.5 rounded-full bg-transparent hover:bg-purple-950/30 border border-purple-500/50 hover:border-purple-400 font-semibold text-purple-300 transition-all">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-6 border-t border-[#22223b] bg-[#0e0e15]/50">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <h2 class="text-3xl font-bold tracking-tight text-white flex items-center gap-3">
+                    <span class="w-2.5 h-8 bg-purple-500 rounded-full"></span>
+                    About Me
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-base sm:text-lg">
+                    Computer Science Engineering student currently in the 3rd semester at Dhaanish Ahmed College of Engineering, Chennai (GPA: 9.2). Hands-on experience in web development, JavaScript, UI/UX-oriented design, and technology-focused project building.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    When I'm not coding, you'll find me exploring new design trends, solving LeetCode problems (40+ solved), participating in paper presentations, hackathons, and building practical projects for technical events from the 1st year onward.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    I'm always excited to work on projects that challenge me to grow and learn something new.
+                </p>
+            </div>
+            <!-- Pixel Art / Aesthetic Graphic Box -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="w-full max-w-sm p-6 rounded-2xl bg-cardBg border border-purple-500/25 glow-box relative flex flex-col items-center justify-center py-12">
+                    <div class="absolute top-4 right-4 text-purple-400 text-xl font-mono">✦</div>
+                    <div class="absolute bottom-4 left-4 text-purple-400 text-xl font-mono">✨</div>
+                    <div class="text-center space-y-4">
+                        <!-- CSS Pixel Cat Graphic -->
+                        <div class="inline-block p-4 rounded-xl bg-purple-950/40 border border-purple-800/40 shadow-inner">
+                            <i class="fa-solid fa-cat text-6xl text-purple-400 animate-bounce"></i>
+                        </div>
+                        <div class="font-mono text-sm text-purple-300">
+                            &lt;Code &amp; Creativity /&gt;
+                        </div>
+                        <div class="text-xs text-gray-400">
+                            Chennai, India • B.E. CSE (2025-2029)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6 border-t border-[#22223b]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-10 flex items-center gap-3">
+                <span class="w-2.5 h-8 bg-purple-500 rounded-full"></span>
+                Skills & Technologies
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="p-6 rounded-2xl bg-cardBg border border-[#22223b] hover:border-purple-500/40 transition-all">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-3 rounded-xl bg-purple-950/60 text-purple-400">
+                            <i class="fa-solid fa-code text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">Frontend Developer</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">HTML5</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">CSS3</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">JavaScript</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">Responsive Design</span>
+                    </div>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="p-6 rounded-2xl bg-cardBg border border-[#22223b] hover:border-purple-500/40 transition-all">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-3 rounded-xl bg-purple-950/60 text-purple-400">
+                            <i class="fa-solid fa-pen-nib text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">UI/UX & Design</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">User Interface Design</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">Web App Development</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">Pitch Decks & Branding</span>
+                    </div>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="p-6 rounded-2xl bg-cardBg border border-[#22223b] hover:border-purple-500/40 transition-all">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-3 rounded-xl bg-purple-950/60 text-purple-400">
+                            <i class="fa-solid fa-terminal text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">Core & Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">C++</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">GitHub / Version Control</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">LeetCode (40+ Solved)</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs text-purple-300 font-medium">AWS & Google Cloud Basics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 px-6 border-t border-[#22223b] bg-[#0e0e15]/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-12 flex items-center gap-3">
+                <span class="w-2.5 h-8 bg-purple-500 rounded-full"></span>
+                Experience & Education
+            </h2>
+            <div class="relative border-l-2 border-purple-500/30 ml-4 sm:ml-8 space-y-12">
+                <!-- Timeline Item 1 -->
+                <div class="relative pl-8 sm:pl-10">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-purple-600 border-4 border-darkBg flex items-center justify-center text-xs font-bold text-white shadow-lg">
+                        '26
+                    </div>
+                    <div class="p-6 rounded-2xl bg-cardBg border border-[#22223b]">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-950/60 text-purple-300 border border-purple-800/40">June - July 2026</span>
+                        <h3 class="text-xl font-bold text-white mt-2">Web Development Intern</h3>
+                        <p class="text-purple-400 text-sm font-medium">Pantech Solutions Ltd.</p>
+                        <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                            Completed hands-on internship training focusing on advanced frontend technologies, responsive web layouts, and modern application development workflows.
+                        </p>
+                    </div>
+                </div>
+                <!-- Timeline Item 2 -->
+                <div class="relative pl-8 sm:pl-10">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-purple-600 border-4 border-darkBg flex items-center justify-center text-xs font-bold text-white shadow-lg">
+                        '25
+                    </div>
+                    <div class="p-6 rounded-2xl bg-cardBg border border-[#22223b]">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-950/60 text-purple-300 border border-purple-800/40">2025 - 2029</span>
+                        <h3 class="text-xl font-bold text-white mt-2">B.E. Computer Science Engineering</h3>
+                        <p class="text-purple-400 text-sm font-medium">Dhaanish Ahmed College of Engineering, Chennai</p>
+                        <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                            Currently in 3rd semester maintaining an excellent GPA of 9.2. Active in technical paper presentations, hackathons, and independent web engineering.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 border-t border-[#22223b]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">My Projects</h2>
+                <p class="text-gray-400 text-base">A collection of 10 practical projects I've worked on, ranging from web applications to interactive concept models and responsive frontends.</p>
+            </div>
+
+            <!-- Projects Grid (All 10 Projects) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="rounded-2xl bg-cardBg border border-[#22223b] overflow-hidden flex flex-col justify-between hover:border-purple-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-purple-950/80 via-[#12121a] to-indigo-950/60 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-900/60 text-purple-300 w-max border border-purple-700/40">June 2026</span>
+                        <div class="text-purple-400 font-mono text-sm">#01 Portfolio</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Resume Portfolio Web Design</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Designed and developed a personal portfolio website with a professional, responsive presentation.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">HTML5</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">CSS3</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">JS</span>
+                            </div>
+                            <button onclick="openModal('Resume Portfolio Web Design', 'Designed and developed a personal portfolio website with a professional, responsive presentation showcasing full-stack capabilities, education, and project work.', 'June 2026', ['HTML5', 'CSS3', 'Responsive Design'])" class="w-full py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-300 hover:text-white font-medium text-sm border border-purple-700/40 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="rounded-2xl bg-cardBg border border-[#22223b] overflow-hidden flex flex-col justify-between hover:border-purple-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-purple-950/80 via-[#12121a] to-indigo-950/60 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-900/60 text-purple-300 w-max border border-purple-700/40">June 2026</span>
+                        <div class="text-purple-400 font-mono text-sm">#02 Game</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Chess Game - JS</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Built an interactive chess game using JavaScript with responsive UI and game interactions.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">JavaScript</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">UI Design</span>
+                            </div>
+                            <button onclick="openModal('Chess Game - JS', 'Built an interactive chess game using JavaScript with responsive UI, move validation, and game interactions for smooth browser playability.', 'June 2026', ['JavaScript', 'DOM', 'CSS'])" class="w-full py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-300 hover:text-white font-medium text-sm border border-purple-700/40 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="rounded-2xl bg-cardBg border border-[#22223b] overflow-hidden flex flex-col justify-between hover:border-purple-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-purple-950/80 via-[#12121a] to-indigo-950/60 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-900/60 text-purple-300 w-max border border-purple-700/40">July 2026</span>
+                        <div class="text-purple-400 font-mono text-sm">#03 Web Frontend</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Rapido Booking Web Frontend</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Designed a ride-booking frontend inspired by real-world ride-hailing applications.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">Frontend</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">UI/UX</span>
+                            </div>
+                            <button onclick="openModal('Rapido Booking Web Frontend Design', 'Designed a ride-booking frontend inspired by real-world ride-hailing applications with clean user flows, booking cards, and responsive layout.', 'July 2026', ['HTML', 'CSS', 'JavaScript'])" class="w-full py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-300 hover:text-white font-medium text-sm border border-purple-700/40 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="rounded-2xl bg-cardBg border border-[#22223b] overflow-hidden flex flex-col justify-between hover:border-purple-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-purple-950/80 via-[#12121a] to-indigo-950/60 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-900/60 text-purple-300 w-max border border-purple-700/40">July 2026</span>
+                        <div class="text-purple-400 font-mono text-sm">#04 Event Finder</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Tech Event Finder Web Frontend</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Created a web frontend concept to help users discover and explore technology events.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">UI Design</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">Frontend</span>
+                            </div>
+                            <button onclick="openModal('Tech Event Finder Web Frontend Design', 'Created a web frontend concept to help users discover and explore technology events, hackathons, and workshops with intuitive filtering.', 'July 2026', ['HTML5', 'CSS3', 'JavaScript'])" class="w-full py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-300 hover:text-white font-medium text-sm border border-purple-700/40 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="rounded-2xl bg-cardBg border border-[#22223b] overflow-hidden flex flex-col justify-between hover:border-purple-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-purple-950/80 via-[#12121a] to-indigo-950/60 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-900/60 text-purple-300 w-max border border-purple-700/40">August 2026</span>
+                        <div class="text-purple-400 font-mono text-sm">#05 Computer Vision</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Face Detection & Object Recognition</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Developed a web application concept for real-time face detection and object recognition.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">AI Concept</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">Web App</span>
+                            </div>
+                            <button onclick="openModal('Face Detection & Object Recognition Web', 'Developed a web application concept for real-time face detection and object recognition with interactive interface simulation.', 'August 2026', ['JavaScript', 'Web APIs', 'UI Design'])" class="w-full py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-300 hover:text-white font-medium text-sm border border-purple-700/40 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="rounded-2xl bg-cardBg border border-[#22223b] overflow-hidden flex flex-col justify-between hover:border-purple-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-purple-950/80 via-[#12121a] to-indigo-950/60 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-900/60 text-purple-300 w-max border border-purple-700/40">August 2026</span>
+                        <div class="text-purple-400 font-mono text-sm">#06 Location Spotter</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Live Location Spotter Web</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Built a live location-sharing web application for displaying and tracking user locations.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">Geolocator</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">JavaScript</span>
+                            </div>
+                            <button onclick="openModal('Live Location Spotter Web', 'Built a live location-sharing web application for displaying and tracking user locations using browser geolocation APIs and map interfaces.', 'August 2026', ['Geolocation API', 'JavaScript', 'CSS'])" class="w-full py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-300 hover:text-white font-medium text-sm border border-purple-700/40 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="rounded-2xl bg-cardBg border border-[#22223b] overflow-hidden flex flex-col justify-between hover:border-purple-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-purple-950/80 via-[#12121a] to-indigo-950/60 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-900/60 text-purple-300 w-max border border-purple-700/40">August 2026</span>
+                        <div class="text-purple-400 font-mono text-sm">#07 Sustainability</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">GreenRoot AI Web</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Developed a sustainability-focused web concept connecting tree adoption, tracking, and environmental impact.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">Eco Tech</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">Web App</span>
+                            </div>
+                            <button onclick="openModal('GreenRoot AI Web', 'Developed a sustainability-focused web concept connecting tree adoption, tracking, and environmental impact metrics with engaging dashboards.', 'August 2026', ['Frontend', 'UI/UX', 'JavaScript'])" class="w-full py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-300 hover:text-white font-medium text-sm border border-purple-700/40 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="rounded-2xl bg-cardBg border border-[#22223b] overflow-hidden flex flex-col justify-between hover:border-purple-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-purple-950/80 via-[#12121a] to-indigo-950/60 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-900/60 text-purple-300 w-max border border-purple-700/40">September 2026</span>
+                        <div class="text-purple-400 font-mono text-sm">#08 Air Interaction</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">AirWrite AI Web</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Created a web concept for air-based writing interaction with an engaging user interface.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">AI Concept</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">Interaction</span>
+                            </div>
+                            <button onclick="openModal('AirWrite AI Web', 'Created a web concept for air-based writing interaction with an engaging user interface and motion-tracking simulation.', 'September 2026', ['JavaScript', 'UI/UX', 'Canvas'])" class="w-full py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-300 hover:text-white font-medium text-sm border border-purple-700/40 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="rounded-2xl bg-cardBg border border-[#22223b] overflow-hidden flex flex-col justify-between hover:border-purple-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-purple-950/80 via-[#12121a] to-indigo-950/60 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-900/60 text-purple-300 w-max border border-purple-700/40">September 2026</span>
+                        <div class="text-purple-400 font-mono text-sm">#09 Disaster Alert</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Mountain Slide Guard Sensor Web</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Built a disaster early-warning web application concept for monitoring mountain slide risks and alerts.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">IoT Concept</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">Safety</span>
+                            </div>
+                            <button onclick="openModal('Mountain Slide Guard Sensor Web Application', 'Built a disaster early-warning web application concept for monitoring mountain slide risks, sensor inputs, and emergency alerts.', 'September 2026', ['Frontend', 'Alert System', 'UI Design'])" class="w-full py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-300 hover:text-white font-medium text-sm border border-purple-700/40 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="rounded-2xl bg-cardBg border border-[#22223b] overflow-hidden flex flex-col justify-between hover:border-purple-500/50 transition-all group md:col-span-2 lg:col-span-1">
+                    <div class="h-48 bg-gradient-to-br from-purple-950/80 via-[#12121a] to-indigo-950/60 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-900/60 text-purple-300 w-max border border-purple-700/40">October 2026</span>
+                        <div class="text-purple-400 font-mono text-sm">#10 Hydro Model</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Rain Volt Web</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Developed an interactive rooftop rain water and micro-hydropower working-model web application.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">Working Model</span>
+                                <span class="px-2.5 py-0.5 rounded bg-purple-950/50 text-purple-300 text-xs border border-purple-800/30">Clean Energy</span>
+                            </div>
+                            <button onclick="openModal('Rain Volt Web', 'Developed an interactive rooftop rain water and micro-hydropower working-model web application demonstrating renewable energy output.', 'October 2026', ['JavaScript', 'Simulation', 'UI/UX'])" class="w-full py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-300 hover:text-white font-medium text-sm border border-purple-700/40 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-20 px-6 border-t border-[#22223b] bg-[#0e0e15]/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-10 flex items-center gap-3">
+                <span class="w-2.5 h-8 bg-purple-500 rounded-full"></span>
+                Certifications, Internships & Technical Events
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <div class="p-4 rounded-xl bg-cardBg border border-[#22223b] flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-purple-950/80 text-purple-400 mt-0.5"><i class="fa-solid fa-certificate"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">AWS Workshop CIT</h4>
+                        <p class="text-xs text-purple-400 mt-0.5">9 February 2026</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardBg border border-[#22223b] flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-purple-950/80 text-purple-400 mt-0.5"><i class="fa-solid fa-briefcase"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">Web Development Intern - Pantech Solutions Ltd.</h4>
+                        <p class="text-xs text-purple-400 mt-0.5">19 June - 3 July 2026</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardBg border border-[#22223b] flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-purple-950/80 text-purple-400 mt-0.5"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">Completion of C++ - Saylor Org University</h4>
+                        <p class="text-xs text-purple-400 mt-0.5">5 July 2026</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardBg border border-[#22223b] flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-purple-950/80 text-purple-400 mt-0.5"><i class="fa-solid fa-award"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">JavaScript Essentials 1 - Cisco Network Academy</h4>
+                        <p class="text-xs text-purple-400 mt-0.5">21 July 2026</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardBg border border-[#22223b] flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-purple-950/80 text-purple-400 mt-0.5"><i class="fa-solid fa-robot"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">Introduction to Generative AI - Google Cloud</h4>
+                        <p class="text-xs text-purple-400 mt-0.5">29 July 2026</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardBg border border-[#22223b] flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-purple-950/80 text-purple-400 mt-0.5"><i class="fa-solid fa-file-lines"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">IDEANIX Paper Presentation - New Prince College</h4>
+                        <p class="text-xs text-purple-400 mt-0.5">26 September 2026</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardBg border border-[#22223b] flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-purple-950/80 text-purple-400 mt-0.5"><i class="fa-solid fa-palette"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">Web Designing Event Participation - Tagore College</h4>
+                        <p class="text-xs text-purple-400 mt-0.5">25 September 2026</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardBg border border-[#22223b] flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-purple-950/80 text-purple-400 mt-0.5"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">Web2Brand Event Participation - Guru Nanak College</h4>
+                        <p class="text-xs text-purple-400 mt-0.5">22 September 2026</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardBg border border-[#22223b] flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-purple-950/80 text-purple-400 mt-0.5"><i class="fa-solid fa-chart-pie"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">Pitch Deck Event - Guru Nanak College</h4>
+                        <p class="text-xs text-purple-400 mt-0.5">23 September 2026</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardBg border border-[#22223b] flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-purple-950/80 text-purple-400 mt-0.5"><i class="fa-solid fa-star"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">Tech Pitch Deck Event Participation - Saveetha College</h4>
+                        <p class="text-xs text-purple-400 mt-0.5">6 October 2026</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 border-t border-[#22223b]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">Let's Work Together</h2>
+                <p class="text-gray-400 text-base">Have a project in mind or want to discuss opportunities? Send me a message!</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Form -->
+                <div class="p-8 rounded-2xl bg-cardBg border border-[#22223b]">
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Name</label>
+                            <input type="text" required placeholder="Your Name" class="w-full px-4 py-3 rounded-xl bg-darkBg border border-[#22223b] text-white focus:outline-none focus:border-purple-500 transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Email</label>
+                            <input type="email" required placeholder="your.email@example.com" class="w-full px-4 py-3 rounded-xl bg-darkBg border border-[#22223b] text-white focus:outline-none focus:border-purple-500 transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Message</label>
+                            <textarea rows="4" required placeholder="Your message..." class="w-full px-4 py-3 rounded-xl bg-darkBg border border-[#22223b] text-white focus:outline-none focus:border-purple-500 transition-colors text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 font-semibold text-white shadow-lg shadow-purple-600/30 transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info & Socials -->
+                <div class="flex flex-col justify-between space-y-8">
+                    <div class="p-8 rounded-2xl bg-cardBg border border-[#22223b] space-y-6">
+                        <h3 class="text-xl font-bold text-white">Get in Touch</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            I'm always open to discussing new opportunities, creative projects, or partnerships. Whether you have a specific project in mind or just want to connect, I'd love to hear from you.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-envelope text-purple-400 w-5"></i>
+                                <span>missbee1409@gmail.com</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-purple-400 w-5"></i>
+                                <span>Chennai, India</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Socials Box -->
+                    <div class="p-8 rounded-2xl bg-cardBg border border-[#22223b]">
+                        <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">My Socials</h4>
+                        <div class="flex items-center space-x-4">
+                            <a href="https://linkedin.com/in/humera07" target="_blank" class="w-12 h-12 rounded-xl bg-darkBg border border-[#22223b] flex items-center justify-center text-gray-300 hover:text-white hover:border-purple-500 transition-all">
+                                <i class="fa-brands fa-linkedin-in text-lg"></i>
+                            </a>
+                            <a href="https://github.com/humeramubeen" target="_blank" class="w-12 h-12 rounded-xl bg-darkBg border border-[#22223b] flex items-center justify-center text-gray-300 hover:text-white hover:border-purple-500 transition-all">
+                                <i class="fa-brands fa-github text-lg"></i>
+                            </a>
+                            <a href="mailto:missbee1409@gmail.com" class="w-12 h-12 rounded-xl bg-darkBg border border-[#22223b] flex items-center justify-center text-gray-300 hover:text-white hover:border-purple-500 transition-all">
+                                <i class="fa-solid fa-envelope text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 px-6 border-t border-[#22223b] text-center text-sm text-gray-500">
+        <p>© 2026 Humera Mubeen. Built with precision & passion.</p>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="bg-cardBg border border-purple-500/40 rounded-2xl max-w-lg w-full p-6 relative glow-box animate-in fade-in zoom-in duration-200">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <span id="modal-date" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-950/60 text-purple-300 border border-purple-800/40"></span>
+            <h3 id="modal-title" class="text-2xl font-bold text-white mt-3 mb-2"></h3>
+            <p id="modal-desc" class="text-gray-300 text-sm leading-relaxed mb-6"></p>
+            <div class="mb-6">
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Technologies Used</h4>
+                <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+            </div>
+            <button onclick="closeModal()" class="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-500 font-semibold text-white transition-all">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden px-6 py-3 rounded-xl bg-purple-900 border border-purple-500 text-white font-medium shadow-2xl transition-all">
+        Message sent successfully! Thank you for reaching out.
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Project Modal logic
+        function openModal(title, desc, date, tags) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('modal-date').innerText = date;
+            
+            const tagsContainer = document.getElementById('modal-tags');
+            tagsContainer.innerHTML = '';
+            tags.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'px-3 py-1 rounded-full bg-purple-950/60 border border-purple-800/50 text-xs text-purple-300 font-medium';
+                span.innerText = tag;
+                tagsContainer.appendChild(span);
+            });
+
+            document.getElementById('project-modal').classList.remove('hidden');
+            document.getElementById('project-modal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+            document.getElementById('project-modal').classList.remove('flex');
+        }
+
+        // Contact form submission
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
